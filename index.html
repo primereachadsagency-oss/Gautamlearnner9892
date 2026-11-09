@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ગુજરાતી 𝐓𝐫𝐚𝐝𝐞𝐫</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gautam Ji - Stock Market Learning Community</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -21,291 +20,618 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1952014905765937');
+fbq('init', '1636871265132147');
 fbq('track', 'PageView');
-
-// Custom Function for Real-time Subscribe Tracking
-function trackSubscribeEvent(location) {
-    if (typeof fbq === 'function') {
-        fbq('track', 'Subscribe', {
-            button_location: location,
-            channel: 'Telegram ગુજરાતી 𝐓𝐫𝐚𝐝𝐞𝐫'
-        });
-    }
-}
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1952014905765937&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1636871265132147&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-    
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            -webkit-tap-highlight-color: transparent;
-        }
-        .btn-glow {
-            box-shadow: 0 4px 14px rgba(10, 102, 228, 0.35);
-            transition: all 0.2s ease;
-        }
-        .btn-glow:active {
-            transform: scale(0.98);
-        }
-        @keyframes pulse-ring {
-            0% { transform: scale(0.95); opacity: 0.8; }
-            50% { transform: scale(1.2); opacity: 1; }
-            100% { transform: scale(0.95); opacity: 0.8; }
-        }
-        .pulse-dot {
-            animation: pulse-ring 1.8s infinite ease-in-out;
-        }
-    </style>
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #030712;
+      color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
 
-    
+    /* Ambient Aurora Gradient Orbs */
+    .orb {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(80px);
+      opacity: 0.45;
+      pointer-events: none;
+      will-change: transform;
+    }
+
+    .orb-blue {
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.7) 0%, rgba(37, 99, 235, 0.3) 60%, transparent 80%);
+      top: -10%;
+      left: -10%;
+      animation: floatOrb1 18s ease-in-out infinite alternate;
+    }
+
+    .orb-amber {
+      width: 440px;
+      height: 440px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.6) 0%, rgba(217, 119, 6, 0.25) 60%, transparent 80%);
+      bottom: -10%;
+      right: -8%;
+      animation: floatOrb2 22s ease-in-out infinite alternate;
+    }
+
+    .orb-purple {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.5) 0%, rgba(99, 102, 241, 0.2) 60%, transparent 80%);
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulseCenterOrb 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatOrb1 {
+      0% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(120px, 90px) scale(1.15); }
+      100% { transform: translate(-40px, 160px) scale(0.95); }
+    }
+
+    @keyframes floatOrb2 {
+      0% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(-100px, -80px) scale(1.2); }
+      100% { transform: translate(50px, -130px) scale(0.9); }
+    }
+
+    @keyframes pulseCenterOrb {
+      0% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.3; }
+      50% { transform: translate(-48%, -52%) scale(1.25); opacity: 0.6; }
+      100% { transform: translate(-52%, -48%) scale(0.95); opacity: 0.35; }
+    }
+
+    /* Subtle Animated Trading Cyber Grid */
+    .cyber-grid {
+      position: absolute;
+      inset: 0;
+      background-size: 48px 48px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 85%);
+      -webkit-mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 85%);
+      pointer-events: none;
+      animation: gridShift 30s linear infinite;
+    }
+
+    @keyframes gridShift {
+      0% { background-position: 0 0; }
+      100% { background-position: 48px 48px; }
+    }
+
+    /* Glass card backdrop */
+    .card-dark-glass {
+      background: radial-gradient(130% 100% at 50% 0%, #0d121d 0%, #06090f 70%, #020408 100%);
+      box-shadow: 
+        0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 25px 60px -15px rgba(0, 0, 0, 0.9),
+        0 0 45px -10px rgba(14, 165, 233, 0.25);
+    }
+
+    /* Animated Avatar Wrapper & Glow Effects */
+    .avatar-wrapper {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      animation: avatarFloat 4s ease-in-out infinite;
+    }
+
+    @keyframes avatarFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+
+    /* Expanding Pulse Rings around Logo */
+    .avatar-pulse-ring {
+      position: absolute;
+      inset: -6px;
+      border-radius: 9999px;
+      border: 2px solid rgba(245, 176, 38, 0.7);
+      animation: radarRing 2.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      pointer-events: none;
+    }
+
+    .avatar-pulse-ring-delayed {
+      position: absolute;
+      inset: -6px;
+      border-radius: 9999px;
+      border: 2px solid rgba(56, 189, 248, 0.6);
+      animation: radarRing 2.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite 1.4s;
+      pointer-events: none;
+    }
+
+    @keyframes radarRing {
+      0% {
+        transform: scale(0.92);
+        opacity: 0.9;
+      }
+      80% {
+        transform: scale(1.35);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1.4);
+        opacity: 0;
+      }
+    }
+
+    .avatar-inner {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      border-radius: 9999px;
+      padding: 3.5px;
+      background: linear-gradient(135deg, #f5b026, #38bdf8, #d97706, #0284c7);
+      background-size: 300% 300%;
+      animation: rotateBorder 5s ease infinite alternate;
+      box-shadow: 
+        0 0 25px 6px rgba(245, 176, 38, 0.6),
+        0 0 45px 10px rgba(56, 189, 248, 0.3);
+    }
+
+    @keyframes rotateBorder {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    /* Yellow/Gold Glow Text */
+    .text-glow-yellow {
+      color: #ffde59;
+      text-shadow: 
+        0 0 10px rgba(255, 222, 89, 0.8),
+        0 0 24px rgba(255, 222, 89, 0.5),
+        0 0 40px rgba(245, 176, 38, 0.35);
+      animation: textNeonPulse 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes textNeonPulse {
+      0% {
+        text-shadow: 
+          0 0 8px rgba(255, 222, 89, 0.7),
+          0 0 20px rgba(255, 222, 89, 0.4);
+      }
+      100% {
+        text-shadow: 
+          0 0 14px rgba(255, 222, 89, 0.95),
+          0 0 30px rgba(255, 222, 89, 0.65),
+          0 0 50px rgba(245, 176, 38, 0.4);
+      }
+    }
+
+    /* Glossy Cyan/Blue CTA Button with Shimmer Sweep */
+    .btn-blue-glow {
+      background: linear-gradient(180deg, #38bdf8 0%, #0284c7 48%, #0369a1 100%);
+      box-shadow: 
+        0 0 28px rgba(56, 189, 248, 0.55),
+        inset 0 1px 1px rgba(255, 255, 255, 0.7),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-blue-glow:hover {
+      transform: translateY(-2px);
+      box-shadow: 
+        0 0 40px rgba(56, 189, 248, 0.8),
+        inset 0 1px 1px rgba(255, 255, 255, 0.9),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-blue-glow:active {
+      transform: translateY(0);
+    }
+
+    /* Continuous 45-degree Gloss Beam Sweep */
+    .btn-blue-glow::after {
+      content: '';
+      position: absolute;
+      top: -60%;
+      left: -80%;
+      width: 60%;
+      height: 220%;
+      background: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.15) 30%, 
+        rgba(255, 255, 255, 0.7) 50%, 
+        rgba(255, 255, 255, 0.15) 70%, 
+        transparent 100%
+      );
+      transform: rotate(30deg);
+      animation: glossySweep 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      pointer-events: none;
+    }
+
+    @keyframes glossySweep {
+      0% { left: -80%; }
+      60%, 100% { left: 140%; }
+    }
+
+    /* Golden Pill Badge */
+    .badge-gold {
+      background: rgba(15, 12, 6, 0.9);
+      border: 1.5px solid #d99a26;
+      box-shadow: 
+        0 0 14px rgba(217, 154, 38, 0.35),
+        inset 0 0 10px rgba(217, 154, 38, 0.15);
+    }
+
+    /* Bottom Neon Gradient Bar with Shimmer */
+    .neon-bottom-bar {
+      background: linear-gradient(90deg, #06b6d4, #3b82f6, #a855f7, #ec4899, #f59e0b, #06b6d4);
+      background-size: 300% 100%;
+      animation: neonFlow 5s linear infinite;
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+    }
+
+    @keyframes neonFlow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 300% 50%; }
+    }
+  </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between text-gray-800 antialiased selection:bg-blue-100">
+<body class="min-h-screen relative flex items-center justify-center p-4 sm:p-6 md:p-8">
 
-    <!-- Compact Header -->
-    <header class="w-full bg-white border-b border-gray-100 py-2 px-3 sm:px-6 flex justify-between items-center shadow-xs sticky top-0 z-40">
-        <div class="flex items-center space-x-2">
-            <img src="Gautam.jpeg" 
-                 alt="Logo" 
-                 class="w-7 h-7 rounded-full object-cover border border-blue-500 shadow-xs"
-                 onerror="this.src='https://placehold.co/80x80/0a66e4/ffffff?text=GT';">
-            <div>
-                <span class="font-extrabold text-gray-900 text-xs sm:text-sm block leading-tight tracking-tight">ગુજરાતી 𝐓𝐫𝐚𝐝𝐞𝐫</span>
-                <span class="text-[9px] text-blue-600 font-bold uppercase leading-none block">Market Expert</span>
-            </div>
+  <!-- Background Layer 1: Ambient Floating Aurora Glow Orbs -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <div class="orb orb-blue"></div>
+    <div class="orb orb-amber"></div>
+    <div class="orb orb-purple"></div>
+  </div>
+
+  <!-- Background Layer 2: Animated Cyber Grid -->
+  <div class="cyber-grid z-0"></div>
+
+  <!-- Background Layer 3: Interactive Floating Particle/Stars Canvas -->
+  <canvas id="stars-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+  <!-- Main Card Container -->
+  <main class="relative z-10 w-full max-w-[420px] card-dark-glass rounded-[28px] border border-white/10 px-6 sm:px-8 pt-9 pb-7 flex flex-col items-center text-center backdrop-blur-xl">
+
+    <!-- Glowing & Animated Logo Container -->
+    <div class="avatar-wrapper">
+      <div class="avatar-pulse-ring"></div>
+      <div class="avatar-pulse-ring-delayed"></div>
+      <div class="avatar-inner">
+        <div class="w-full h-full rounded-full overflow-hidden bg-gray-900 flex items-center justify-center">
+          <img 
+            src="gautam.jpeg" 
+            alt="Gautam Ji" 
+            class="w-full h-full object-cover object-top filter brightness-95 contrast-105 transition-transform duration-500 hover:scale-110"
+            onerror="this.onerror=null; this.src='https://placehold.co/220x220/1f2937/ffde59?text=Gautam+Ji';"
+          />
         </div>
-        
-        <a href="https://t.me/+6rU5xmoKzuE5MWI9" target="_blank" onclick="trackSubscribeEvent('Header Join Button')" class="inline-flex items-center px-3 py-1 bg-blue-50 hover:bg-blue-100 text-blue-600 font-bold text-[11px] rounded-full transition">
-            <i class="fa-brands fa-telegram text-xs mr-1 text-blue-500"></i> Join
-        </a>
-    </header>
-
-    <!-- Main Content Container -->
-    <main class="flex-grow flex items-center justify-center px-3 py-4 sm:py-6">
-        <div class="w-full max-w-[420px] bg-transparent flex flex-col items-center text-center space-y-3.5">
-
-            <!-- Online Badge -->
-            <div class="inline-flex items-center space-x-1.5 bg-emerald-50 text-emerald-700 text-[11px] font-bold px-3 py-1 rounded-full border border-emerald-200/80 shadow-xs">
-                <span class="w-2 h-2 bg-emerald-500 rounded-full pulse-dot"></span>
-                <span>5,947 Traders Online</span>
-            </div>
-
-            <!-- Profile Image & Title -->
-            <div class="flex flex-col items-center space-y-1.5">
-                <div class="relative">
-                    <div class="w-20 h-20 rounded-full p-0.5 bg-gradient-to-tr from-blue-500 to-indigo-600 shadow-sm">
-                        <img src="Guj.jpeg" 
-                             alt="ગુજરાતી 𝐓𝐫𝐚𝐝𝐞𝐫 Profile" 
-                             class="w-full h-full object-cover rounded-full border border-white"
-                             onerror="this.src='https://placehold.co/200x200/1e293b/ffffff?text=GT';">
-                    </div>
-                </div>
-
-                <div>
-                    <h1 class="text-xl font-black text-gray-900 tracking-tight uppercase leading-tight">ગુજરાતી 𝐓𝐫𝐚𝐝𝐞𝐫</h1>
-                    <p class="text-blue-600 font-bold text-xs mt-0.5 flex items-center justify-center gap-1">
-                        <span>🏆</span> India's No.1 Stock Market Channel
-                    </p>
-                </div>
-
-                <!-- Rating -->
-                <div class="flex flex-col items-center">
-                    <div class="flex text-amber-400 space-x-0.5 text-xs">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-[10px] font-semibold text-gray-500 mt-0.5">4.9/5 (2,340 Reviews)</p>
-                </div>
-            </div>
-
-            <!-- Primary CTA Button -->
-            <a href="https://t.me/+6rU5xmoKzuE5MWI9" target="_blank" onclick="trackSubscribeEvent('Primary CTA')" class="w-full py-3 px-4 bg-[#0a66e4] hover:bg-[#0855c4] active:bg-[#0747a6] text-white font-extrabold text-sm rounded-xl btn-glow flex items-center justify-center space-x-2 transition">
-                <span>Join Free Telegram Channel</span>
-                <span class="text-base">→</span>
-            </a>
-
-            <!-- Compact Stats Grid -->
-            <div class="grid grid-cols-3 gap-2 w-full">
-                <div class="bg-white py-2 px-1 rounded-xl border border-gray-100 shadow-xs flex flex-col items-center justify-center">
-                    <span class="text-base font-black text-gray-900">50K+</span>
-                    <span class="text-[10px] font-medium text-gray-500">Members</span>
-                </div>
-                <div class="bg-white py-2 px-1 rounded-xl border border-gray-100 shadow-xs flex flex-col items-center justify-center">
-                    <span class="text-base font-black text-gray-900">5+</span>
-                    <span class="text-[10px] font-medium text-gray-500">Years</span>
-                </div>
-                <div class="bg-white py-2 px-1 rounded-xl border border-gray-100 shadow-xs flex flex-col items-center justify-center">
-                    <span class="text-base font-black text-gray-900">95%</span>
-                    <span class="text-[10px] font-medium text-gray-500">Accuracy</span>
-                </div>
-            </div>
-
-            <!-- Headline Section -->
-            <div class="space-y-0.5 pt-1">
-                <h2 class="text-base font-black text-gray-900 leading-snug">
-                    Get <span class="text-blue-600 uppercase">FREE</span> Daily Calls
-                </h2>
-                <p class="text-xs font-bold text-gray-700">
-                    for NIFTY, BANKNIFTY & SENSEX
-                </p>
-                <p class="text-[10px] text-gray-500 font-medium pt-0.5">
-                    Join thousands of traders getting daily market analysis
-                </p>
-            </div>
-
-            <!-- Limited Offer Banner -->
-            <div class="w-full bg-amber-50/90 border border-amber-200/80 rounded-xl py-2 px-3 flex items-center justify-center text-amber-800 font-bold text-xs shadow-xs">
-                <span>🔥 Limited FREE Access Available</span>
-            </div>
-
-            <!-- Feature List -->
-            <div class="w-full space-y-2">
-                <div class="w-full bg-white p-2.5 rounded-xl border border-gray-100 shadow-xs flex items-center space-x-2.5 text-left">
-                    <span class="text-base">📊</span>
-                    <span class="font-bold text-gray-800 text-xs">Daily Nifty & BankNifty Levels</span>
-                </div>
-                <div class="w-full bg-white p-2.5 rounded-xl border border-gray-100 shadow-xs flex items-center space-x-2.5 text-left">
-                    <span class="text-base">🎓</span>
-                    <span class="font-bold text-gray-800 text-xs">Educational Market Analysis</span>
-                </div>
-                <div class="w-full bg-white p-2.5 rounded-xl border border-gray-100 shadow-xs flex items-center space-x-2.5 text-left">
-                    <span class="text-base">👥</span>
-                    <span class="font-bold text-gray-800 text-xs">50,000+ Subscribers Community</span>
-                </div>
-            </div>
-
-            <!-- Secondary CTA Button -->
-            <a href="https://t.me/+6rU5xmoKzuE5MWI9" target="_blank" onclick="trackSubscribeEvent('Secondary CTA')" class="w-full py-3 px-4 bg-[#0a66e4] hover:bg-[#0855c4] active:bg-[#0747a6] text-white font-extrabold text-sm rounded-xl btn-glow flex items-center justify-center space-x-2 transition">
-                <span>Join Free Telegram Channel</span>
-                <span class="text-base">→</span>
-            </a>
-
-            <!-- Brief Inline Disclaimer -->
-            <p class="text-[10px] text-gray-400 leading-tight px-2 pt-1">
-                <strong class="font-semibold text-gray-500">Disclaimer:</strong>
-                This channel is for educational purposes only. Trading involves market risk.
-            </p>
-
-        </div>
-    </main>
-
-    <!-- Compact Footer Section -->
-    <footer class="w-full bg-white border-t border-gray-200 py-3 px-3 mt-4">
-        <div class="max-w-md mx-auto flex flex-col items-center space-y-2">
-            <!-- Navigation Links -->
-            <div class="flex flex-wrap justify-center gap-2.5 text-[11px] font-bold text-gray-600">
-                <button onclick="openModal('aboutModal')" class="hover:text-blue-600 active:text-blue-700 transition">About Us</button>
-                <span class="text-gray-300">•</span>
-                <button onclick="openModal('termsModal')" class="hover:text-blue-600 active:text-blue-700 transition">Terms</button>
-                <span class="text-gray-300">•</span>
-                <button onclick="openModal('disclaimerModal')" class="hover:text-blue-600 active:text-blue-700 transition">Disclaimer</button>
-                <span class="text-gray-300">•</span>
-                <button onclick="openModal('contactModal')" class="hover:text-blue-600 active:text-blue-700 transition">Contact Us</button>
-            </div>
-
-            <!-- Copyright -->
-            <div class="text-[10px] text-gray-400 text-center">
-                &copy; <span id="year"></span> ગુજરાતી 𝐓𝐫𝐚𝐝𝐞𝐫. All rights reserved.
-            </div>
-        </div>
-    </footer>
-
-    <!-- MODALS FOR FOOTER LINKS -->
-    
-    <!-- About Us Modal -->
-    <div id="aboutModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-3">
-        <div class="bg-white w-full max-w-sm rounded-2xl p-5 shadow-2xl relative max-h-[80vh] overflow-y-auto">
-            <button onclick="closeModal('aboutModal')" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-lg font-bold w-7 h-7 flex items-center justify-center rounded-full bg-gray-100">&times;</button>
-            <h3 class="text-base font-extrabold text-gray-900 mb-2 border-b border-gray-100 pb-2">About Us</h3>
-            <div class="text-xs text-gray-600 space-y-2 leading-relaxed">
-                <p>Welcome to ગુજરાતી 𝐓𝐫𝐚𝐝𝐞𝐫 Stock Market Channel, one of India's premier online trading communities.</p>
-                <p>With 5+ years of stock market experience, we share technical research, intraday levels for NIFTY, BANKNIFTY & SENSEX, and market guidance.</p>
-            </div>
-            <button onclick="closeModal('aboutModal')" class="mt-4 w-full py-2 bg-blue-600 text-white font-bold rounded-xl text-xs hover:bg-blue-700">Got it</button>
-        </div>
+      </div>
     </div>
 
-    <!-- Terms Modal -->
-    <div id="termsModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-3">
-        <div class="bg-white w-full max-w-sm rounded-2xl p-5 shadow-2xl relative max-h-[80vh] overflow-y-auto">
-            <button onclick="closeModal('termsModal')" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-lg font-bold w-7 h-7 flex items-center justify-center rounded-full bg-gray-100">&times;</button>
-            <h3 class="text-base font-extrabold text-gray-900 mb-2 border-b border-gray-100 pb-2">Terms & Conditions</h3>
-            <div class="text-xs text-gray-600 space-y-2 leading-relaxed">
-                <p><strong>1. Educational Content:</strong> All trade setups and commentary provided are strictly for educational purposes.</p>
-                <p><strong>2. No Guarantee:</strong> Past performance does not guarantee future results. Trading involves financial risks.</p>
-                <p><strong>3. Responsibility:</strong> Users are solely responsible for their investment decisions and capital.</p>
-            </div>
-            <button onclick="closeModal('termsModal')" class="mt-4 w-full py-2 bg-blue-600 text-white font-bold rounded-xl text-xs hover:bg-blue-700">Accept</button>
-        </div>
+    <!-- Glowing Yellow Heading: 'Gautam Ji' -->
+    <h1 class="text-[30px] sm:text-[34px] font-black text-glow-yellow tracking-tight leading-tight mb-2">
+      Gautam Ji
+    </h1>
+
+    <!-- Subtitle: Stock Market Learning Community -->
+   
+   
+
+    <!-- Top CTA Button -->
+    <a 
+      href="https://t.me/+Vu50fiI7srhmMDQ1" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="btn-blue-glow w-full py-3.5 px-6 rounded-2xl text-white font-bold text-[16px] sm:text-[17px] tracking-wide flex items-center justify-center gap-2 select-none shadow-lg mb-5"
+    >
+      <span class="text-xl select-none">🚀</span>
+      <span>Join Our Telegram Group</span>
+    </a>
+
+    <!-- India's Trusted Learning Group Pill Badge -->
+    <div class="badge-gold w-full py-2.5 px-4 rounded-xl text-[14.5px] sm:text-[15.5px] font-bold text-amber-200/95 flex items-center justify-center gap-2 mb-6">
+      <span class="text-base select-none">🔥</span>
+      <span>India's Trusted Learning Group</span>
+    </div>
+
+    <!-- Educational Bullet Points -->
+    <div class="w-full flex flex-col gap-3.5 mb-6 text-left pl-1 sm:pl-2">
+
+     
+
+      <!-- Item 3 -->
+      <div class="flex items-center gap-3 text-white text-[15px] sm:text-[16px] font-medium leading-relaxed">
+        <span class="text-lg flex-shrink-0 select-none">🚀</span>
+        <span>Join Free Community Today</span>
+      </div>
+    </div>
+
+    <!-- Disclaimer Subtext -->
+    <p class="text-[12px] sm:text-[12.5px] text-gray-400/90 font-normal mb-5 leading-normal">
+      Educational purpose only. No investment advice.
+    </p>
+
+    <!-- Bottom Secondary Animated Glow Bar / CTA -->
+    <a 
+      href="https://t.me/+Vu50fiI7srhmMDQ1" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="w-full group relative p-[2px] rounded-2xl neon-bottom-bar block mb-6 transition-transform active:scale-[0.98]"
+    >
+      <div class="w-full bg-[#0a0f1d] hover:bg-[#0e1629] transition-colors py-3 px-5 rounded-[14px] flex items-center justify-center gap-2">
+        <span class="text-sm select-none">⚡</span>
+        <span class="text-white text-sm sm:text-[15px] font-bold tracking-wide">Enter Telegram Community Free</span>
+        <span class="text-xs text-cyan-400 group-hover:translate-x-1 transition-transform">→</span>
+      </div>
+    </a>
+
+    <!-- Footer Links inside Card -->
+    <footer class="pt-4 border-t border-white/10 w-full flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1.5 text-[11px] sm:text-xs text-gray-400">
+      <button type="button" onclick="openModal('terms-modal')" class="hover:text-amber-300 transition-colors focus:outline-none">Terms</button>
+      <span class="text-gray-600">•</span>
+      <button type="button" onclick="openModal('privacy-modal')" class="hover:text-amber-300 transition-colors focus:outline-none">Privacy Policy</button>
+      <span class="text-gray-600">•</span>
+      <button type="button" onclick="openModal('disclaimer-modal')" class="hover:text-amber-300 transition-colors focus:outline-none">Disclaimer</button>
+      <span class="text-gray-600">•</span>
+      <button type="button" onclick="openModal('facebook-modal')" class="hover:text-amber-300 transition-colors focus:outline-none text-cyan-300/90 font-medium">Meta / FB Disclaimer</button>
+      <span class="text-gray-600">•</span>
+      <button type="button" onclick="openModal('contact-modal')" class="hover:text-amber-300 transition-colors focus:outline-none">Contact Us</button>
+    </footer>
+
+    <!-- Official Meta / Facebook Ad Compliance Disclaimer -->
+    <p class="text-[10px] text-gray-500/80 mt-3.5 leading-relaxed text-center px-1">
+      This site is not a part of the Facebook website or Meta Platforms, Inc. Additionally, this site is NOT endorsed by Facebook or Meta in any way. FACEBOOK is a trademark of META PLATFORMS, INC.
+    </p>
+
+    <p class="text-[11px] text-gray-500 mt-2.5">&copy; <span id="year"></span> Gautam Ji. All rights reserved.</p>
+
+  </main>
+
+  <!-- Modal Backdrop & Containers -->
+  <div id="modal-container" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 transition-opacity duration-200">
+
+    <!-- Terms & Conditions Modal -->
+    <div id="terms-modal" class="modal-card hidden w-full max-w-lg bg-[#0f172a] border border-white/15 rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden transform transition-all duration-200">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#131d36]">
+        <h3 class="text-lg font-bold text-amber-300">Terms &amp; Conditions</h3>
+        <button type="button" onclick="closeModal()" class="text-gray-400 hover:text-white rounded-lg p-1.5 text-2xl font-bold leading-none focus:outline-none">&times;</button>
+      </div>
+      <div class="px-6 py-5 overflow-y-auto text-sm text-gray-300 space-y-3 leading-relaxed text-left">
+        <p>Welcome to the <strong>Gautam Ji Stock Market Learning Community</strong>. By accessing our Telegram channel or learning material, you confirm agreement with the terms listed below.</p>
+        <h4 class="font-semibold text-white">1. Educational &amp; Informational Only</h4>
+        <p>All webinars, case studies, stock setups, and chart analyses shared are exclusively for personal educational purposes. They do not constitute financial advice, equity tips, or trading recommendations.</p>
+        <h4 class="font-semibold text-white">2. High Capital Risk</h4>
+        <p>Financial trading in stocks, futures, and options involves significant risk of loss. Past learning outcomes or simulated trade setups do not guarantee future performance.</p>
+        <h4 class="font-semibold text-white">3. Self Discretion</h4>
+        <p>You are solely responsible for your personal trade setups, capital allocation, and risk management. Always consult a certified financial advisor before taking any financial action.</p>
+      </div>
+      <div class="px-6 py-3 border-t border-white/10 bg-[#0b1120] flex justify-end">
+        <button type="button" onclick="closeModal()" class="px-4 py-2 bg-amber-400 text-black text-xs font-bold rounded-lg hover:bg-amber-300 transition">Close</button>
+      </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal-card hidden w-full max-w-lg bg-[#0f172a] border border-white/15 rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden transform transition-all duration-200">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#131d36]">
+        <h3 class="text-lg font-bold text-amber-300">Privacy Policy</h3>
+        <button type="button" onclick="closeModal()" class="text-gray-400 hover:text-white rounded-lg p-1.5 text-2xl font-bold leading-none focus:outline-none">&times;</button>
+      </div>
+      <div class="px-6 py-5 overflow-y-auto text-sm text-gray-300 space-y-3 leading-relaxed text-left">
+        <p>We respect your privacy. This policy outlines how information is managed when using this landing page.</p>
+        <h4 class="font-semibold text-white">1. Data Storage</h4>
+        <p>This static landing page does not store cookies, collect credit card data, or harvest personal data.</p>
+        <h4 class="font-semibold text-white">2. External Telegram Link</h4>
+        <p>When clicking our join buttons, you will navigate directly to Telegram. Please review Telegram's independent terms of service and privacy policies.</p>
+        <h4 class="font-semibold text-white">3. Policy Changes</h4>
+        <p>We may periodically update this policy in compliance with relevant legal and community guidelines.</p>
+      </div>
+      <div class="px-6 py-3 border-t border-white/10 bg-[#0b1120] flex justify-end">
+        <button type="button" onclick="closeModal()" class="px-4 py-2 bg-amber-400 text-black text-xs font-bold rounded-lg hover:bg-amber-300 transition">Close</button>
+      </div>
     </div>
 
     <!-- Disclaimer Modal -->
-    <div id="disclaimerModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-3">
-        <div class="bg-white w-full max-w-sm rounded-2xl p-5 shadow-2xl relative max-h-[80vh] overflow-y-auto">
-            <button onclick="closeModal('disclaimerModal')" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-lg font-bold w-7 h-7 flex items-center justify-center rounded-full bg-gray-100">&times;</button>
-            <h3 class="text-base font-extrabold text-gray-900 mb-2 border-b border-gray-100 pb-2">Disclaimer</h3>
-            <div class="text-xs text-gray-600 space-y-2 leading-relaxed">
-                <p><strong>Educational Purpose Only:</strong> We are not SEBI registered advisors. Trading in Options and Equities carries significant financial risk.</p>
-                <p>Please consult a certified financial advisor before placing real financial trades.</p>
-            </div>
-            <button onclick="closeModal('disclaimerModal')" class="mt-4 w-full py-2 bg-blue-600 text-white font-bold rounded-xl text-xs hover:bg-blue-700">I Understand</button>
+    <div id="disclaimer-modal" class="modal-card hidden w-full max-w-lg bg-[#0f172a] border border-white/15 rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden transform transition-all duration-200">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#131d36]">
+        <h3 class="text-lg font-bold text-amber-300">Financial &amp; SEBI Disclaimer</h3>
+        <button type="button" onclick="closeModal()" class="text-gray-400 hover:text-white rounded-lg p-1.5 text-2xl font-bold leading-none focus:outline-none">&times;</button>
+      </div>
+      <div class="px-6 py-5 overflow-y-auto text-sm text-gray-300 space-y-3 leading-relaxed text-left">
+        <div class="p-3 bg-amber-500/10 border border-amber-500/30 rounded-lg text-amber-200 text-xs">
+          <strong>Mandatory Notice:</strong> Securities investments and derivatives trading are subject to market risks. Read all scheme and contract related documents thoroughly.
         </div>
+        <p><strong>Gautam Ji</strong> and team are not SEBI registered research analysts or portfolio managers unless explicitly stated.</p>
+        <p>All insights, chart interpretations, indices strategies, and learning modules are strictly for <strong>educational and mentorship purposes</strong>. We do not provide profit sharing, guaranteed returns, or portfolio handling.</p>
+        <p>Trade with appropriate risk management and consult a certified financial advisor before deploying real money in markets.</p>
+      </div>
+      <div class="px-6 py-3 border-t border-white/10 bg-[#0b1120] flex justify-end">
+        <button type="button" onclick="closeModal()" class="px-4 py-2 bg-amber-400 text-black text-xs font-bold rounded-lg hover:bg-amber-300 transition">Close</button>
+      </div>
+    </div>
+
+    <!-- Facebook / Meta Advertising Terms Modal -->
+    <div id="facebook-modal" class="modal-card hidden w-full max-w-lg bg-[#0f172a] border border-white/15 rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden transform transition-all duration-200">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#131d36]">
+        <h3 class="text-lg font-bold text-amber-300">Facebook &amp; Meta Disclaimer</h3>
+        <button type="button" onclick="closeModal()" class="text-gray-400 hover:text-white rounded-lg p-1.5 text-2xl font-bold leading-none focus:outline-none">&times;</button>
+      </div>
+      <div class="px-6 py-5 overflow-y-auto text-sm text-gray-300 space-y-3 leading-relaxed text-left">
+        <div class="p-3 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-200 text-xs">
+          <strong>Non-Affiliation Notice:</strong> This website is an independent educational landing page and is not affiliated with, endorsed by, or sponsored by Meta Platforms, Inc.
+        </div>
+        <h4 class="font-semibold text-white">1. Meta Platforms &amp; Facebook Trademark</h4>
+        <p>FACEBOOK and META are registered trademarks of Meta Platforms, Inc. Any references to Facebook or Meta products are solely for identification and advertising compliance purposes.</p>
+        <h4 class="font-semibold text-white">2. Ad Policy &amp; User Privacy</h4>
+        <p>We strictly comply with Meta's Advertising Standards. We do not engage in misleading statements, make unrealistic claims of guaranteed trading profits, or misuse audience data.</p>
+        <h4 class="font-semibold text-white">3. Third-Party Redirection</h4>
+        <p>Clicking links to Telegram redirects users outside Meta’s ecosystem. Users are subject to the respective external platform’s terms and community policies.</p>
+      </div>
+      <div class="px-6 py-3 border-t border-white/10 bg-[#0b1120] flex justify-end">
+        <button type="button" onclick="closeModal()" class="px-4 py-2 bg-amber-400 text-black text-xs font-bold rounded-lg hover:bg-amber-300 transition">Close</button>
+      </div>
     </div>
 
     <!-- Contact Us Modal -->
-    <div id="contactModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 hidden flex items-center justify-center p-3">
-        <div class="bg-white w-full max-w-sm rounded-2xl p-5 shadow-2xl relative max-h-[80vh] overflow-y-auto">
-            <button onclick="closeModal('contactModal')" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-lg font-bold w-7 h-7 flex items-center justify-center rounded-full bg-gray-100">&times;</button>
-            <h3 class="text-base font-extrabold text-gray-900 mb-2 border-b border-gray-100 pb-2">Contact Us</h3>
-            <div class="text-xs text-gray-600 space-y-2.5 leading-relaxed">
-                <p>Have questions? Reach out to our support team:</p>
-                <div class="bg-gray-50 p-2.5 rounded-xl border border-gray-200 space-y-1.5">
-                    <p class="flex items-center gap-2">
-                        <i class="fa-solid fa-envelope text-blue-600"></i>
-                        <span><strong>Email:</strong> support@viptraders.com</span>
-                    </p>
-                    <p class="flex items-center gap-2">
-                        <i class="fa-brands fa-telegram text-blue-500"></i>
-                        <span><strong>Telegram:</strong> <a href="https://t.me/+6rU5xmoKzuE5MWI9" target="_blank" onclick="trackSubscribeEvent('Modal Contact Support')" class="text-blue-600 underline font-bold">Official Support</a></span>
-                    </p>
-                </div>
+    <div id="contact-modal" class="modal-card hidden w-full max-w-lg bg-[#0f172a] border border-white/15 rounded-2xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden transform transition-all duration-200">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#131d36]">
+        <h3 class="text-lg font-bold text-amber-300">Contact Us</h3>
+        <button type="button" onclick="closeModal()" class="text-gray-400 hover:text-white rounded-lg p-1.5 text-2xl font-bold leading-none focus:outline-none">&times;</button>
+      </div>
+      <div class="px-6 py-5 overflow-y-auto text-sm text-gray-300 space-y-4 text-left">
+        <p>For community inquiries, learning materials, or support, please reach out via our official touchpoints:</p>
+        <div class="flex flex-col gap-3">
+          <div class="p-3 bg-white/5 border border-white/10 rounded-xl flex items-center gap-3">
+            <span class="text-2xl">✈️</span>
+            <div>
+              <div class="font-bold text-white text-xs uppercase tracking-wide">Telegram Channel</div>
+              <a href="https://t.me/+Vu50fiI7srhmMDQ1" target="_blank" rel="noopener noreferrer" class="text-cyan-400 font-semibold hover:underline text-sm">Join Telegram &amp; Connect with Admin</a>
             </div>
-            <button onclick="closeModal('contactModal')" class="mt-4 w-full py-2 bg-blue-600 text-white font-bold rounded-xl text-xs hover:bg-blue-700">Close</button>
+          </div>
+          <div class="p-3 bg-white/5 border border-white/10 rounded-xl flex items-center gap-3">
+            <span class="text-2xl">✉️</span>
+            <div>
+              <div class="font-bold text-white text-xs uppercase tracking-wide">Email Support</div>
+              <a href="mailto:support@gautamji.com" class="text-gray-300 hover:text-white text-sm font-medium">support@gautamji.com</a>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="px-6 py-3 border-t border-white/10 bg-[#0b1120] flex justify-end">
+        <button type="button" onclick="closeModal()" class="px-4 py-2 bg-amber-400 text-black text-xs font-bold rounded-lg hover:bg-amber-300 transition">Close</button>
+      </div>
     </div>
 
-    <script>
-        // Set dynamic year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
+  </div>
 
-        // Modal Handler Functions
-        function openModal(id) {
-            document.getElementById(id).classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
+  <script>
+    // Dynamic copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Modal Controller
+    const modalContainer = document.getElementById('modal-container');
+    let activeModalId = null;
+
+    function openModal(modalId) {
+      document.querySelectorAll('.modal-card').forEach(card => card.classList.add('hidden'));
+      modalContainer.classList.remove('hidden');
+      const target = document.getElementById(modalId);
+      if (target) {
+        target.classList.remove('hidden');
+        activeModalId = modalId;
+      }
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modalContainer.classList.add('hidden');
+      document.querySelectorAll('.modal-card').forEach(card => card.classList.add('hidden'));
+      activeModalId = null;
+      document.body.style.overflow = '';
+    }
+
+    modalContainer.addEventListener('click', (e) => {
+      if (e.target === modalContainer) {
+        closeModal();
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modalContainer.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+
+    // 60FPS Floating Particle & Sparkles Background Canvas
+    (function initBackgroundCanvas() {
+      const canvas = document.getElementById('stars-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width, height;
+      let particles = [];
+      const PARTICLE_COUNT = window.innerWidth < 768 ? 40 : 80;
+
+      function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      }
+
+      window.addEventListener('resize', resize);
+      resize();
+
+      class Particle {
+        constructor() {
+          this.reset(true);
         }
 
-        function closeModal(id) {
-            document.getElementById(id).classList.add('hidden');
-            document.body.style.overflow = 'auto';
+        reset(initial = false) {
+          this.x = Math.random() * width;
+          this.y = initial ? Math.random() * height : height + 10;
+          this.radius = Math.random() * 1.6 + 0.6;
+          this.speedY = Math.random() * 0.4 + 0.15;
+          this.speedX = (Math.random() - 0.5) * 0.25;
+          this.alpha = Math.random() * 0.7 + 0.2;
+          this.alphaDelta = (Math.random() * 0.015 + 0.005) * (Math.random() > 0.5 ? 1 : -1);
+          const colors = ['#38bdf8', '#f59e0b', '#c084fc', '#ffffff'];
+          this.color = colors[Math.floor(Math.random() * colors.length)];
         }
 
-        // Close modal when clicking backdrop
-        window.onclick = function(event) {
-            const modals = ['aboutModal', 'termsModal', 'disclaimerModal', 'contactModal'];
-            modals.forEach(modalId => {
-                const modal = document.getElementById(modalId);
-                if (event.target === modal) {
-                    closeModal(modalId);
-                }
-            });
-        };
-    </script>
+        update() {
+          this.y -= this.speedY;
+          this.x += this.speedX;
+          this.alpha += this.alphaDelta;
+
+          if (this.alpha <= 0.1 || this.alpha >= 0.9) {
+            this.alphaDelta *= -1;
+          }
+
+          if (this.y < -10 || this.x < -10 || this.x > width + 10) {
+            this.reset(false);
+          }
+        }
+
+        draw() {
+          ctx.save();
+          ctx.globalAlpha = Math.max(0, Math.min(1, this.alpha));
+          ctx.fillStyle = this.color;
+          ctx.shadowBlur = this.radius * 3.5;
+          ctx.shadowColor = this.color;
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        }
+      }
+
+      for (let i = 0; i < PARTICLE_COUNT; i++) {
+        particles.push(new Particle());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        for (let i = 0; i < particles.length; i++) {
+          particles[i].update();
+          particles[i].draw();
+        }
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    })();
+  </script>
+
 </body>
 </html>
